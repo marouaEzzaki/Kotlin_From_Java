@@ -1,19 +1,16 @@
 fun main() {
     val isAdult = false
     val isMale = true
-    val isOrderCompleted: Boolean? = null //para poder poner = null, tenemos que especificar
-                                            //el tipo y poner '?'
+    val isOrderCompleted: Boolean? = null // To allow null, specify the type and add '?'
 
     /**
-     * como buena practica hay una convencion
-     * para nombrar las variables empezando
-     * con is...
-     * whenever you work with booleans you always want to ask a question
+     * Best practice: there’s a naming convention for booleans—
+     * variables should start with 'is...' to indicate a true/false state.
+     * Whenever working with booleans, you always want to ask a question.
      */
     println(isAdult)
     println(isMale)
     println(isOrderCompleted)
 
-    // hasSlept //isCompleted
-
+    // Example variable names: hasSlept, isCompleted
 }
