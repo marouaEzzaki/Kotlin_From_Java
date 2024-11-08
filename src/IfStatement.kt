@@ -1,5 +1,6 @@
 fun main() {
 
+    //Same as in Java
     val n1 = 10
     val n2 = 20
 
