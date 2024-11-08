@@ -3,20 +3,21 @@ fun main() {
     val n2 = 20
 
     /**
-     * Las expresiones if pueden devolver un valor
-     * es como poner un return
-     * Puedes guardar el valor e una variable
+     * In Kotlin, if statements can act as expressions that return values.
+     * Similar to using 'return' in Java, but directly within the if block.
+     * This means we can store the result of an if-else check in a variable for example.
      */
+
     val value = if (n1 >= n2 && n1 <= 30) {
-        println("True")
-        ":)" //es como si tuviera un return
+        println("Condition is True")
+        ":)" // Acts like a return statement, providing a result to 'value'
 
     } else {
-        println("False")
-        ":("
+        println("Condition is False")
+        ":(" // Return alternative when the condition is false
     }
 
-    println(value)
+    println("Result of the if expression: $value")
 
-    println("some code")
+    println("End of the program")
 }
