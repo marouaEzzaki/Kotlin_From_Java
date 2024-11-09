@@ -1,30 +1,25 @@
 fun main() {
     /**
-     * Like in java, the difference between lists and arrays
-     * is that lists are expandable whereas with arrays
-     * once ypu define the size, you are no longer able
-     * to expand its size
+     * Like in Java, the key difference between lists and arrays is that lists are
+     * expandable, whereas arrays have a fixed size. Once you define the size of an array,
+     * you cannot change it. In contrast, lists in Kotlin can grow or shrink in size dynamically.
      */
 
-    //LISTOF CREATES A READ-ONLY LIST
-    val list : List<String> = listOf("Maroua", "Mercedes")
+    // listOf creates a read-only list (immutable)
+    val list: List<String> = listOf("Maroua", "Mercedes")
 
-    val list2 = listOf("Maroua", "Mercedes")//you can omit the type declaration
+    val list2 = listOf("Maroua", "Mercedes") // You can omit the type declaration if it can be inferred
 
-    println(list[0])//para acceder a un elemento específico
-    println(list.get(0)) //otra forma de acceder
-    println(list.size)//cuantos elementos tiene la lista
+    // Accessing specific elements in the list
+    println(list[0]) // Accessing element by index (zero-based)
+    println(list.get(0)) // Alternative way to access an element (same result as using [])
+    println(list.size) // Returns the number of elements in the list
     println(list.contains("Maroua"))
     println(list)
 
-    //You can add more elements, but you need to use another constructor
+    // To modify a list (adding or removing elements), use a mutable list
     //mutableListOf <- this gives the flexibility to add and remove values
-    val names = mutableListOf<String>(
-        "Anas",
-        "Imran",
-        "Younes",
-        "Ayoub"
-    )
+    val names = mutableListOf<String>("Anas", "Imran", "Younes", "Ayoub")
     println(names)
     names.add("Anwar")
     println(names)
@@ -32,11 +27,13 @@ fun main() {
     println(names)
 
     /**
-     * listOf: Lista inmutable, no puedes cambiar ni el tamaño ni el contenido.
-     * mutableListOf: Lista mutable, permite cambiar tanto el tamaño como el contenido.
-     * Array: Tamaño fijo (no se puede cambiar el tamaño), pero permite cambiar los valores de sus elementos.
+     * Differences:
+     * - listOf: Immutable list, meaning you cannot change the size or contents once defined.
+     * - mutableListOf: Mutable list, allows you to change the size and content.
+     * - Array: Fixed size array, but allows modification of individual elements. Cannot resize.
      */
 
+    // Creating a mutable list with a generic type
     val message = mutableListOf<Any>()
     println(message.isEmpty())
 }
